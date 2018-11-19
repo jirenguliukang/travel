@@ -16,14 +16,17 @@ export default {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
-        loop: true
+        loop: true,
+        autoplay: 3000,
+        autoplayDisableOnInteraction: false
       },
       swiperList: [{
-          id: '0001',
-          imgURL: 'http://img1.qunarzz.com/piao/fusion/1811/31/da037478f37cf202.jpg_750x200_fe28d396.jpg'
-      },{
-          id: '0002',
-          imgURL: 'http://img1.qunarzz.com/piao/fusion/1806/e5/fc2bfc8bfcccd402.jpg_750x200_1218ab5f.jpg'
+        id: '0001',
+        imgURL: 'http://img1.qunarzz.com/piao/fusion/1806/e5/fc2bfc8bfcccd402.jpg_750x200_1218ab5f.jpg'
+      },
+      {
+        id: '0002',
+        imgURL: 'http://img1.qunarzz.com/piao/fusion/1811/b4/ac00a771d74f5a02.jpg_750x200_a71cff60.jpg'
       }]
     }
   }
@@ -33,10 +36,11 @@ export default {
 .wrapper >>> .swiper-pagination-bullet-active
   background: #fff
 .wrapper
-  overflow: hidden
+  // overflow: hidden
   width: 100%
-  height:0
-  padding-bottom: 31.25%
+  height: 31.25vm
+  // height:0
+  // padding-bottom: 31.25%
   .swiper-img
     width: 100%
 </style>
