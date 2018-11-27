@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-title">周末去哪儿</div>
     <ul>
-        <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+        <li class="item border-bottom" v-for="item of list" :key="item.id">
             <div class="item-img-wrapper">
                 <img class="item-img" :src="item.imgURL" alt="">
             </div>
@@ -18,25 +18,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgURL: 'http://img1.qunarzz.com/sight/source/1811/65/7322301be0a92c.jpg_r_640x214_a3485c55.jpg',
-        title: '摩崖石刻造像',
-        desc: '来乐山，就要看乐山大佛'
-      }, {
-        id: '0002',
-        imgURL: 'http://img1.qunarzz.com/sight/source/1811/65/7322301be0a92c.jpg_r_640x214_a3485c55.jpg',
-        title: '摩崖石刻造像',
-        desc: '来乐山，就要看乐山大佛'
-      }, {
-        id: '0003',
-        imgURL: 'http://img1.qunarzz.com/sight/source/1811/65/7322301be0a92c.jpg_r_640x214_a3485c55.jpg',
-        title: '摩崖石刻造像',
-        desc: '来乐山，就要看乐山大佛'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
@@ -44,7 +27,6 @@ export default {
 <style lang="stylus" scoped>
 @import '~styles/mixins.styl';
   .recommend-title
-    margin-top: .2rem
     line-height: .8rem
     background: #eee
     text-indent: .2rem

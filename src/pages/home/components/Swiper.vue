@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption" >
-        <swiper-slide v-for="item of swiperList" :key="item.id">
+    <swiper :options="swiperOption" v-if="showSwiper">
+        <swiper-slide v-for="item of list" :key="item.id">
             <img class="swiper-img" :src="item.imgURL" alt="">
         </swiper-slide>
         <div class="swiper-pagination"  slot="pagination"></div>
@@ -12,6 +12,9 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+    list: Array
+  },
   data: function () {
     return {
       swiperOption: {
@@ -19,15 +22,20 @@ export default {
         loop: true,
         autoplay: 3000,
         autoplayDisableOnInteraction: false
-      },
-      swiperList: [{
-        id: '0001',
-        imgURL: 'http://img1.qunarzz.com/piao/fusion/1806/e5/fc2bfc8bfcccd402.jpg_750x200_1218ab5f.jpg'
-      },
-      {
-        id: '0002',
-        imgURL: 'http://img1.qunarzz.com/piao/fusion/1811/b4/ac00a771d74f5a02.jpg_750x200_a71cff60.jpg'
-      }]
+      }
+      // swiperList: [{
+      //   id: '0001',
+      //   imgURL: 'http://img1.qunarzz.com/piao/fusion/1806/e5/fc2bfc8bfcccd402.jpg_750x200_1218ab5f.jpg'
+      // },
+      // {
+      //   id: '0002',
+      //   imgURL: 'http://img1.qunarzz.com/piao/fusion/1811/b4/ac00a771d74f5a02.jpg_750x200_a71cff60.jpg'
+      // }]
+    }
+  },
+  computed: {
+    showSwiper () {
+      return this.list.length
     }
   }
 }
