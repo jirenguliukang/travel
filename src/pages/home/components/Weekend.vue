@@ -34,7 +34,7 @@ export default {
         id: '0003',
         imgURL: 'http://img1.qunarzz.com/sight/source/1811/65/7322301be0a92c.jpg_r_640x214_a3485c55.jpg',
         title: '摩崖石刻造像',
-        desc: '来乐山，就要看乐山大佛'          
+        desc: '来乐山，就要看乐山大佛'
       }]
     }
   }

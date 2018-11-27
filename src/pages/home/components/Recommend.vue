@@ -33,7 +33,7 @@ export default {
         id: '0003',
         imgURL: 'http://img1.qunarzz.com/sight/p0/1807/ad/ad574bfe6c9e1ceda3.img.png_200x200_ea7a0734.png',
         title: '成都欢乐谷',
-        desc: '快乐成都首站，一个充满快乐的主题乐园'          
+        desc: '快乐成都首站，一个充满快乐的主题乐园'
       }]
     }
   }
