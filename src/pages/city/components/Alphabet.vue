@@ -53,7 +53,7 @@ export default {
           if (index >= 0 && this.letters.length) {
             this.$emit('change', this.letters[index])
           }
-        },16)
+        }, 16)
       }
     },
     handleTouchEnd () {
