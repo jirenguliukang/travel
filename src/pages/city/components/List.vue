@@ -12,7 +12,7 @@
       <div class="area">
         <div class="title border-topbottom">热门城市</div>
         <div class="button-list">
-            <div class="button-wrapper" v-for="item of hot" :key="item.id" 
+            <div class="button-wrapper" v-for="item of hot" :key="item.id"
             @click="handleCityClick(item.name)"
             >
                 <div class="button">{{item.name}}</div>
